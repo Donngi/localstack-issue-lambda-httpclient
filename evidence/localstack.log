@@ -1,0 +1,36 @@
+2021-06-05T14:06:39:INFO:localstack.services.awslambda.lambda_api: Error executing Lambda function arn:aws:lambda:us-east-1:000000000000:function:SampleFunction: Lambda process returned error status code: 1. Result: Java version11.0.11. Output:
+Exception in thread "main" java.lang.NoClassDefFoundError: java/net/http/HttpRequest
+	at org.example.Handler.handleRequest(Handler.java:21)
+	at org.example.Handler.handleRequest(Handler.java:13)
+	at cloud.localstack.LambdaExecutor.main(LambdaExecutor.java:94)
+Caused by: java.lang.ClassNotFoundException: java.net.http.HttpRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	... 3 more Traceback (most recent call last):
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_api.py", line 603, in run_lambda
+    result = LAMBDA_EXECUTOR.execute(func_arn, func_details, event, context=context,
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 179, in execute
+    return do_execute()
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 171, in do_execute
+    return _run(func_arn=func_arn)
+  File "/opt/code/localstack/localstack/utils/cloudwatch/cloudwatch_util.py", line 149, in wrapped
+    raise e
+  File "/opt/code/localstack/localstack/utils/cloudwatch/cloudwatch_util.py", line 145, in wrapped
+    result = func(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 162, in _run
+    raise e
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 150, in _run
+    result = self._execute(func_arn, func_details, event, context, version)
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 823, in _execute
+    raise InvocationException(result, log_output)
+localstack.services.awslambda.lambda_executors.InvocationException: Lambda process returned error status code: 1. Result: Java version11.0.11. Output:
+Exception in thread "main" java.lang.NoClassDefFoundError: java/net/http/HttpRequest
+	at org.example.Handler.handleRequest(Handler.java:21)
+	at org.example.Handler.handleRequest(Handler.java:13)
+	at cloud.localstack.LambdaExecutor.main(LambdaExecutor.java:94)
+Caused by: java.lang.ClassNotFoundException: java.net.http.HttpRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	... 3 more

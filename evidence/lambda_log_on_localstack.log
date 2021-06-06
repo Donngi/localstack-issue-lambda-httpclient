@@ -1,0 +1,40 @@
+2021-06-05T14:06:34.840000+00:00 2021/06/05/[LATEST]2fe8c31e Exception in thread "main" java.lang.NoClassDefFoundError: java/net/http/HttpRequest
+2021-06-05T14:06:35.371000+00:00 2021/06/05/[LATEST]2fe8c31e 	at org.example.Handler.handleRequest(Handler.java:21)
+2021-06-05T14:06:35.902000+00:00 2021/06/05/[LATEST]2fe8c31e 	at org.example.Handler.handleRequest(Handler.java:13)
+2021-06-05T14:06:36.433000+00:00 2021/06/05/[LATEST]2fe8c31e 	at cloud.localstack.LambdaExecutor.main(LambdaExecutor.java:94)
+2021-06-05T14:06:36.964000+00:00 2021/06/05/[LATEST]2fe8c31e Caused by: java.lang.ClassNotFoundException: java.net.http.HttpRequest
+2021-06-05T14:06:37.496000+00:00 2021/06/05/[LATEST]2fe8c31e 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+2021-06-05T14:06:38.027000+00:00 2021/06/05/[LATEST]2fe8c31e 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+2021-06-05T14:06:38.558000+00:00 2021/06/05/[LATEST]2fe8c31e 	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+2021-06-05T14:06:39.089000+00:00 2021/06/05/[LATEST]2fe8c31e 	... 3 more
+2021-06-05T14:06:39.652000+00:00 2021/06/05/[LATEST]fd8e426a START 9d3e8106-cc52-423d-a535-ea54f8221558: Lambda arn:aws:lambda:us-east-1:000000000000:function:SampleFunction started via "local" executor ...
+2021-06-05T14:06:39.653000+00:00 2021/06/05/[LATEST]fd8e426a Lambda process returned error status code: 1. Result: Java version11.0.11. Output:
+2021-06-05T14:06:39.654000+00:00 2021/06/05/[LATEST]fd8e426a Exception in thread "main" java.lang.NoClassDefFoundError: java/net/http/HttpRequest
+2021-06-05T14:06:39.656000+00:00 2021/06/05/[LATEST]fd8e426a 	at org.example.Handler.handleRequest(Handler.java:21)
+2021-06-05T14:06:39.657000+00:00 2021/06/05/[LATEST]fd8e426a 	at org.example.Handler.handleRequest(Handler.java:13)
+2021-06-05T14:06:39.659000+00:00 2021/06/05/[LATEST]fd8e426a 	at cloud.localstack.LambdaExecutor.main(LambdaExecutor.java:94)
+2021-06-05T14:06:39.660000+00:00 2021/06/05/[LATEST]fd8e426a Caused by: java.lang.ClassNotFoundException: java.net.http.HttpRequest
+2021-06-05T14:06:39.662000+00:00 2021/06/05/[LATEST]fd8e426a 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+2021-06-05T14:06:39.663000+00:00 2021/06/05/[LATEST]fd8e426a 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+2021-06-05T14:06:39.664000+00:00 2021/06/05/[LATEST]fd8e426a 	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+2021-06-05T14:06:39.666000+00:00 2021/06/05/[LATEST]fd8e426a 	... 3 more Traceback (most recent call last):
+2021-06-05T14:06:39.667000+00:00 2021/06/05/[LATEST]fd8e426a   File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 786, in do_execute
+2021-06-05T14:06:39.669000+00:00 2021/06/05/[LATEST]fd8e426a     result = lambda_function(event, context)
+2021-06-05T14:06:39.670000+00:00 2021/06/05/[LATEST]fd8e426a   File "/opt/code/localstack/localstack/services/awslambda/lambda_api.py", line 719, in execute
+2021-06-05T14:06:39.672000+00:00 2021/06/05/[LATEST]fd8e426a     result = lambda_executors.EXECUTOR_LOCAL.execute_java_lambda(
+2021-06-05T14:06:39.673000+00:00 2021/06/05/[LATEST]fd8e426a   File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 838, in execute_java_lambda
+2021-06-05T14:06:39.675000+00:00 2021/06/05/[LATEST]fd8e426a     result = self.run_lambda_executor(cmd, func_details=func_details)
+2021-06-05T14:06:39.676000+00:00 2021/06/05/[LATEST]fd8e426a   File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 234, in run_lambda_executor
+2021-06-05T14:06:39.677000+00:00 2021/06/05/[LATEST]fd8e426a     raise InvocationException('Lambda process returned error status code: %s. Result: %s. Output:\n%s' %
+2021-06-05T14:06:39.679000+00:00 2021/06/05/[LATEST]fd8e426a localstack.services.awslambda.lambda_executors.InvocationException: Lambda process returned error status code: 1. Result: Java version11.0.11. Output:
+2021-06-05T14:06:39.680000+00:00 2021/06/05/[LATEST]fd8e426a Exception in thread "main" java.lang.NoClassDefFoundError: java/net/http/HttpRequest
+2021-06-05T14:06:39.682000+00:00 2021/06/05/[LATEST]fd8e426a 	at org.example.Handler.handleRequest(Handler.java:21)
+2021-06-05T14:06:39.683000+00:00 2021/06/05/[LATEST]fd8e426a 	at org.example.Handler.handleRequest(Handler.java:13)
+2021-06-05T14:06:39.685000+00:00 2021/06/05/[LATEST]fd8e426a 	at cloud.localstack.LambdaExecutor.main(LambdaExecutor.java:94)
+2021-06-05T14:06:39.686000+00:00 2021/06/05/[LATEST]fd8e426a Caused by: java.lang.ClassNotFoundException: java.net.http.HttpRequest
+2021-06-05T14:06:39.687000+00:00 2021/06/05/[LATEST]fd8e426a 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source)
+2021-06-05T14:06:39.689000+00:00 2021/06/05/[LATEST]fd8e426a 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source)
+2021-06-05T14:06:39.690000+00:00 2021/06/05/[LATEST]fd8e426a 	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+2021-06-05T14:06:39.692000+00:00 2021/06/05/[LATEST]fd8e426a 	... 3 more
+2021-06-05T14:06:39.695000+00:00 2021/06/05/[LATEST]fd8e426a END RequestId: 9d3e8106-cc52-423d-a535-ea54f8221558
+2021-06-05T14:06:39.696000+00:00 2021/06/05/[LATEST]fd8e426a REPORT RequestId: 9d3e8106-cc52-423d-a535-ea54f8221558 Duration: 5323 ms
