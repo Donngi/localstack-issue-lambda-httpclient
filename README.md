@@ -1,6 +1,6 @@
 # README
 
-## How to
+## How to reproduce issue
 Start localstack.
 
 ```
@@ -24,3 +24,6 @@ Invoke function.
 ```
 $ aws lambda invoke --function-name SampleFunction --payload '{}' --cli-binary-format raw-in-base64-out --endpoint-url=http://localhost:4566 result.log
 ```
+
+## Evidence logs
+Some execution logs are stored in `/evidence`.
